@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">Kitchen</div><!-- Ime sobe  -->
+<!-- Gornji dio stranice -->
+    <div id="main">
+
+        <div id="objekti">
+            <!-- Pantry -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Pantry</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectPantry()">Inspect Pantry</button>
+                    <button onclick="notePantry()" class="pantryHidden">Read Note</button>
+                    <button onclick="pantrySacks(this)" class="pantryHidden">Move Sacks</button>
+                </div>
+            </div>
+            <!-- Fridge -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Fridge</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectFridge()">Inspect Fridge</button>
+                    <button onclick="noteFridge()" class="fridgeHidden">Read paper on the fridge</button>
+                </div>
+            </div>
+
+            <!-- Sink -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Sink</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectSink()">Inspect Sink</button>
+                    <button onclick="noteSink()" class="sinkHidden">Read note</button>
+                </div>
+            </div>
+
+            <!-- Dining Room Door -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Dining Room</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="returnRoom2()">Enter Dining Room</button>
+                </div>
+            </div>
+
+           
+
+
+            
+        </div>
+        <!-- Desni dio za text i unosenje stvari -->
+        <div id="desniDio">
+            <div id="textLog"></div>
+            <div id="puzzleArea"></div>
+        </div>
+    </div>
+    
+<!-- Inventory  -->
+    <div id="inventoryBar">
+    <div id="inventoryLeft">
+        <h3>Inventory</h3>
+        <div id="inventoryItems"></div>
+    </div>
+
+    <div id="inventoryRight">
+        <button onclick="showHint()" class="hintBtn">Hint</button>
+        <button onclick="resetGame()" class="resetBtn">Reset Game</button>
+    </div>
+</div>
+
+
+
+    <!-- Javascript -->
+     <script src="gameState.js"></script>
+     <script src="ui.js"></script>
+     <script src="room3.js"></script>
+     <script src="hints.js"></script>
+</body>
+</html>

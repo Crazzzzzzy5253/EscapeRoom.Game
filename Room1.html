@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">Guest Room</div><!-- Ime sobe  -->
+<!-- Gornji dio stranice -->
+    <div id="main">
+
+        <div id="objekti">
+            <!-- Bed -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Bed</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectBed()">Inspect Bed</button>
+                    <button onclick="noteBed()" class="bedHidden">Read Note</button>
+                </div>
+            </div>
+
+            <!-- Nightstand -->
+             <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Nightstand</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectNightstand()">Inspect Nightstand</button>
+                    <button onclick="unlockNightstand(this)" class="nightstandHidden">Unlock Nightstand</button>
+                    <button onclick="pickupMatchbox(this)" class="nightstandHidden2">Pickup Matchbox</button>
+                    <button onclick="nightstandNote()" class="nightstandHidden2">Read Torn Paper</button>
+                </div>
+            </div>
+
+            <!-- Suitcase -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Suitcase</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectSuitcase()">Inspect Suitcase</button>
+                    <button onclick="nightstandKey(this)" class="suitcaseHidden">Pickup Small Key</button>
+                    <button onclick="suitcaseNote()" class="suitcaseHidden">Read Note</button>
+                </div>
+            </div>
+
+            <!-- Window -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Window</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectWindow()">Inspect Window</button>
+                    <button onclick="lightCandles(this)" class="windowHidden">Light Candles</button>
+                </div>
+            </div>
+
+
+            <!-- Wall clock -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Wall Clock</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectClock()">Inspect Wall Clock</button>
+                    <button onclick="changeTime()" class="clockHidden">Change Clock Time</button>
+                    <button onclick="keyRoom2(this) " class="clockHidden2">Pickup Dining Room Key</button>
+                </div>
+            </div>
+
+            <!-- Dining room door -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Dining Room Door</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectDoor2()">Inspect Dining Room Door</button>
+                    <button onclick="unlockRoom2(this)" class="room2Hidden">Unlock Dining Room</button>
+                    <button onclick="enterRoom2()" class="room2Hidden2">Enter Dining Room</button>
+                </div>
+            </div>
+
+            <!-- Exit door -->
+            <div class="objekt">
+        <div class="naslovObjekta">
+            <h2>Exit Door</h2> <span class="strijelica">▼</span>
+        </div>
+        <div class="sadrzajObjekta">
+                 <button onclick="inspectExitDoor()">Inspect Exit Door</button>
+                 <button onclick="showExitPuzzle()" class="exitHidden">Enter Code</button>
+                 <button onclick="finishGame()" class="exitHidden2">Exit</button>
+                </div>
+            </div>
+
+
+            
+        </div>
+        <!-- Desni dio za text i unosenje stvari -->
+        <div id="desniDio">
+            <div id="textLog"></div>
+            <div id="puzzleArea"></div>
+        </div>
+    </div>
+    
+<!-- Inventory  -->
+    <div id="inventoryBar">
+    <div id="inventoryLeft">
+        <h3>Inventory</h3>
+        <div id="inventoryItems"></div>
+    </div>
+
+    <div id="inventoryRight">
+        <button onclick="showHint()" class="hintBtn">Hint</button>
+        <button onclick="resetGame()" class="resetBtn">Reset Game</button>
+    </div>
+</div>
+
+
+
+    <!-- Javascript -->
+     <script src="gameState.js"></script>
+     <script src="ui.js"></script>
+     <script src="room1.js"></script>
+     <script src="hints.js"></script>
+</body>
+</html>

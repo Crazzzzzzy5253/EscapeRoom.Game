@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dining Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">Dining Room</div><!-- Ime sobe  -->
+<!-- Gornji dio stranice -->
+    <div id="main">
+
+        <div id="objekti">
+            <!-- Dining Table -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Dining Table</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectTable()">Inspect Dining Table</button>
+                </div>
+            </div>
+            <!-- Cabinet -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Cabinet</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectCabinet()">Inspect Cabinet</button>
+                    <button onclick="inspectNoteCabinet()" class="cabinetHidden">Read note</button>
+                </div>
+            </div>
+            <!-- Fireplace -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Fireplace</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectFireplace()">Inspect Fireplace</button>
+                    <button onclick="inspectFireplaceButtons()" class="fireplaceHidden">Inspect Buttons</button>
+                    <button onclick="fireplaceNote()" class="fireplaceHidden2">Read note</button>
+                    <button onclick="kitchenKeyPickup(this)" class="fireplaceHidden2">Pick up kitchen key</button>
+                </div>
+            </div>
+            <!-- Menu Board -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Menu Board</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectMenu()">Inspect Menu Board</button>
+                    <button onclick="inspectMenu2()" class="menuHidden">Inspect Backside</button>
+                    <button onclick="showMenuPuzzle(this)" class="menuHidden">Inspect Buttons</button>
+                </div>
+            </div>
+            <!-- Kitchen Door -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Kitchen Door</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="inspectKitchenDoor()">Inspect Kitchen Door</button>
+                    <button onclick="unlockKitchen(this)" class="kitchenHidden">Unlock Kitchen Door</button>
+                    <button onclick="enterRoom3()" class="kitchenHidden2">Enter Kitchen</button>
+                </div>
+            </div>
+            <!-- Guest Room Door -->
+            <div class="objekt">
+                <div class="naslovObjekta">
+                    <h2>Guest Room Door</h2> <span class="strijelica">▼</span>
+                </div>
+                <div class="sadrzajObjekta">
+                    <button onclick="enterRoom1()">Enter Guest Room</button>
+                </div>
+            </div>
+
+           
+
+
+            
+        </div>
+        <!-- Desni dio za text i unosenje stvari -->
+        <div id="desniDio">
+            <div id="textLog"></div>
+            <div id="puzzleArea"></div>
+        </div>
+    </div>
+    
+<!-- Inventory  -->
+    <div id="inventoryBar">
+    <div id="inventoryLeft">
+        <h3>Inventory</h3>
+        <div id="inventoryItems"></div>
+    </div>
+
+    <div id="inventoryRight">
+        <button onclick="showHint()" class="hintBtn">Hint</button>
+        <button onclick="resetGame()" class="resetBtn">Reset Game</button>
+    </div>
+</div>
+
+
+
+    <!-- Javascript -->
+     <script src="gameState.js"></script>
+     <script src="ui.js"></script>
+     <script src="room2.js"></script>
+     <script src="hints.js"></script>
+</body>
+</html>
