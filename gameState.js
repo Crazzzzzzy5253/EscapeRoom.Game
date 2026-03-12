@@ -68,10 +68,11 @@ function resetGame() {
     localStorage.removeItem("inventory");
     localStorage.removeItem("textLog");
     localStorage.removeItem("hintLevel");
-    window.location.href = "Start.html"; 
+    window.location.href = "index.html"; 
 }
 
 function startGame(){
     window.location.href = "Room1.html";
 }
+
 
