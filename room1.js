@@ -22,7 +22,7 @@ function checkSuitcaseCode() {
     const code =
         code1.value + code2.value + code3.value;
 
-    if (code === "223") {
+    if (code === "222") {
         gameState.suitcaseOpened = true;
         writeText("The suitcase clicks open. There is a small key and a note inside.");
         clearPuzzleArea();
